@@ -1,0 +1,4 @@
+# repository.yaml
+name: "Mein Add-on Repo"
+url: "https://github.com/dropqube/ecowitt_mqtt_addon"
+maintainer: "dropqube"
