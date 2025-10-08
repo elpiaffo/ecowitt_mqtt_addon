@@ -1,0 +1,34 @@
+configuration:
+  title: "Ecowitt MQTT Bridge"
+  options:
+    broker:
+      name: "MQTT-Broker"
+      description: "z. B. core-mosquitto"
+    port:
+      name: "Port"
+    username:
+      name: "Benutzername"
+    password:
+      name: "Passwort"
+    in_topic:
+      name: "Eingangs-Topic(s)"
+      description: "z. B. ecowitt/# oder kommasepariert"
+    discovery_prefix:
+      name: "Discovery Prefix"
+    state_prefix:
+      name: "State Prefix"
+    client_id:
+      name: "Client-ID"
+    cleanup:
+      name: "Discovery aufräumen"
+    use_local_api:
+      name: "Ecowitt LAN-API nutzen"
+    gateway_base_url:
+      name: "Gateway-URL"
+      description: "http://<IP-des-Gateways>"
+    lan_timeout:
+      name: "LAN-Timeout (s)"
+    map_refresh_sec:
+      name: "Sensor-Mapping Aktualisierung (s)"
+    publish_lan_common:
+      name: "LAN common_list publizieren (Duplikate beachten)"
