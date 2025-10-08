@@ -17,6 +17,7 @@ USE_LOCAL=$(jq -r '.use_local_api // false' "$OPTS")
 BASE_URL=$(jq -r '.gateway_base_url // empty' "$OPTS")
 LAN_TIMEOUT=$(jq -r '.lan_timeout // 3.0' "$OPTS")
 MAP_REFRESH=$(jq -r '.map_refresh_sec // 600' "$OPTS")
+PUBLISH_LAN_COMMON=$(jq -r '.publish_lan_common // false' "$OPTS")
 
 CMD="python3 /app/ecowitt_mqtt_bridge.py \
   --broker \"$BROKER\" --port \"$PORT\" \
@@ -28,8 +29,14 @@ CMD="python3 /app/ecowitt_mqtt_bridge.py \
 [ -n "$USERNAME" ] && CMD="$CMD --username \"$USERNAME\""
 [ -n "$PASSWORD" ] && CMD="$CMD --password \"$PASSWORD\""
 [ "$CLEANUP" = "true" ] && CMD="$CMD --cleanup"
+
 if [ "$USE_LOCAL" = "true" ] && [ -n "$BASE_URL" ]; then
   CMD="$CMD --use-local-api --gateway-base-url \"$BASE_URL\" --lan-timeout \"$LAN_TIMEOUT\" --map-refresh-sec \"$MAP_REFRESH\""
+fi
+
+# aktivieren per Flag (oder alternativ: export PUBLISH_LAN_COMMON=1)
+if [ "$PUBLISH_LAN_COMMON" = "true" ]; then
+  CMD="$CMD --publish-lan-common"
 fi
 
 echo "Starting Ecowitt MQTT Bridge..."
