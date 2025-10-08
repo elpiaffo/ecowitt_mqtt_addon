@@ -1,0 +1,44 @@
+name: "Ecowitt MQTT Bridge"
+version: "0.6.0"
+slug: ecowitt_mqtt_bridge
+description: "Parses Ecowitt MQTT uploads and (optional) GW3000 LAN API to publish per-sensor HA MQTT Discovery."
+arch: [aarch64, amd64, armv7]
+startup: application
+init: false
+host_network: true 
+
+options:
+  broker: "core-mosquitto"
+  port: 1883
+  username: "ecowitt_mqtt"
+  password: "ecowitt_mqtt"
+  in_topic: "ecowitt/048308785133,ecowitt/#"
+  discovery_prefix: "homeassistant"
+  state_prefix: "ecowitt_ha"
+  client_id: "ecowitt-bridge"
+  cleanup: false
+  use_local_api: true
+  gateway_base_url: "http://192.168.0.46"
+  gateway_username: "admin"        # add user if GUI Login 
+  gateway_password: ""              #add password (default: empty)
+  lan_timeout: 3.0
+  map_refresh_sec: 600
+  publish_lan_common: false   # do not publish lan results
+
+schema:
+  broker: str
+  port: int
+  username: str?
+  password: str?
+  in_topic: str
+  discovery_prefix: str
+  state_prefix: str
+  client_id: str
+  cleanup: bool
+  use_local_api: bool
+  gateway_base_url: str
+  gateway_username: str?
+  gateway_password: str?
+  lan_timeout: float
+  map_refresh_sec: int
+  publish_lan_common: bool
