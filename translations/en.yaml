@@ -1,0 +1,41 @@
+configuration:
+  title: "Ecowitt MQTT Bridge Add-on"
+  options:
+    broker:
+      name: "MQTT Broker"
+      description: "For example: core-mosquitto or your external broker hostname"
+    port:
+      name: "Port"
+    username:
+      name: "Username"
+    password:
+      name: "Password"
+    in_topic:
+      name: "Input Topic(s)"
+      description: "Example: ecowitt/# or comma-separated list"
+    discovery_prefix:
+      name: "Discovery Prefix"
+      description: "Default: homeassistant"
+    state_prefix:
+      name: "State Prefix"
+      description: "Prefix used for state topics"
+    client_id:
+      name: "Client ID"
+    cleanup:
+      name: "Cleanup Discovery"
+      description: "Remove all existing discovery topics before publishing new ones"
+    use_local_api:
+      name: "Use Ecowitt LAN API"
+      description: "Enable local gateway polling in addition to MQTT"
+    gateway_base_url:
+      name: "Gateway Base URL"
+      description: "Example: http://192.168.1.100"
+    lan_timeout:
+      name: "LAN Timeout (s)"
+      description: "Request timeout for local API calls"
+    map_refresh_sec:
+      name: "Map Refresh (s)"
+      description: "How often to refresh sensor mapping from the gateway"
+    publish_lan_common:
+      name: "Publish LAN common_list"
+      description: "Also publish 'common_list' from LAN API (may cause duplicates)"
