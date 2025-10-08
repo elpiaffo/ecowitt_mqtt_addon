@@ -1,7 +1,7 @@
 name: "Ecowitt MQTT Bridge"
 version: "0.6.0"
 slug: ecowitt_mqtt_bridge
-description: "Parses Ecowitt MQTT uploads and (optional) GW3000 LAN API to publish per-sensor HA MQTT Discovery."
+description: "Parses Ecowitt MQTT uploads and (optional) LAN API to publish per-sensor HA MQTT Discovery."
 arch:
   - aarch64
   - amd64
@@ -44,3 +44,4 @@ schema:
 
 # optional hübschere Darstellung im Add-on-Store:
 panel_icon: "mdi:weather-partly-rainy"
+
