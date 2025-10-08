@@ -1,5 +1,5 @@
-name: "Ecowitt MQTT Bridge"
-version: "0.6.0"
+name: "Ecowitt MQTT Bridge Add-on"
+version: "0.9.0"
 slug: ecowitt_mqtt_bridge
 description: "Parses Ecowitt MQTT uploads and (optional) LAN API to publish per-sensor HA MQTT Discovery."
 arch:
@@ -44,4 +44,5 @@ schema:
 
 # optional hübschere Darstellung im Add-on-Store:
 panel_icon: "mdi:weather-partly-rainy"
+
 
