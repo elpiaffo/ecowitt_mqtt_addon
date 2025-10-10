@@ -46,7 +46,7 @@ Before the add-on can receive data, you **must enable MQTT upload** in your Ecow
 | ------------------- | ---------------------- | -------------------------------------------- |
 | **Host**            | `192.168.0.5`          | The IP address of your Home Assistant server |
 | **Port**            | `1883`                 | MQTT port                                    |
-| **Publish Topic**   | `ecowitt/048308785133` | Topic where data will be published           |
+| **Publish Topic**   | `ecowitt/048308785133` | Topic where data will be published (the number usually is already there           |
 | **Transport**       | `MQTT over TCP`        | Communication type                           |
 | **Upload Interval** | `60`                   | How often data is sent (in seconds)          |
 | **Keep Alive**      | `60`                   | MQTT keepalive time                          |
