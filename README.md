@@ -99,16 +99,6 @@ All configuration can be done directly in Home Assistant — no YAML required.
 | `publish_lan_common` | Publish `common_list` from LAN API                                                                                         | `false`          |
 
 
----
-
-### Example Screenshot
-
-Below is an example of a correct configuration for the Ecowitt MQTT upload:
-*(replace with your local image path if you include it in your repo)*
-
-```markdown
-![Ecowitt MQTT Settings](docs/ecowitt_mqtt_settings.png)
-```
 
 ---
 
