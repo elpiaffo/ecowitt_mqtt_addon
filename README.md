@@ -40,9 +40,9 @@ Before the add-on can receive data, you **must enable MQTT upload** in your Ecow
    http://<your-gateway-ip>/
    ```
 2. Navigate to:
-   **Customized → Protocol Type Same As → MQTT**
-3. Enable the **Customized** option.
-4. Fill in the fields as shown below.
+   **Weather Services → Customized → Enable → Protocol Type Same As → MQTT**
+   
+3. Fill in the fields as shown below.
 
 | Field               | Example Value          | Description                                  |
 | ------------------- | ---------------------- | -------------------------------------------- |
