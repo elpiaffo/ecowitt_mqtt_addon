@@ -51,7 +51,7 @@ Before the add-on can receive data, you **must enable MQTT upload** in your Ecow
 | **Port**            | `1883`                 | MQTT port                                    |
 | **Publish Topic**   | `ecowitt/048308785133` | Topic where data will be published (the number usually is already there           |
 | **Transport**       | `MQTT over TCP`        | Communication type                           |
-| **Upload Interval** | `60`                   | How often data is sent (in seconds)          |
+| **Upload Interval** | `60`                   | How often data is sent (in seconds) Tip: Leave it at 60s          |
 | **Keep Alive**      | `60`                   | MQTT keepalive time                          |
 | **Client Name**     | `GW3000`               | Name of your Ecowitt gateway                 |
 | **Client ID**       | `ecowitt_gw3000`       | Unique MQTT client identifier                |
